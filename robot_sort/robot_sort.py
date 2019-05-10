@@ -109,6 +109,7 @@ class SortingRobot:
                 
                 self.swap_item()
                 self.move_right()
+                
                 if self.compare_item() == 1:
                     
                     self.swap_item()
@@ -118,18 +119,31 @@ class SortingRobot:
                     print('Robot swapped', l[i], 'and', l[i+1])
                     print(l)
 
+                    if self._position == len(l)-1:
+
+                        self._position = 0
+
                 else:
                     self.move_left()
                     self.swap_item()
                     self.move_right()
 
-                if self._position == len(l)-1:
+                    if self._position == len(l)-1:
 
-                    self._position = 0
-                    print('Going back to start! ', i, ' times')
+                        self._position = 0
 
-                if i == len(l)-1:
-                    self.set_light_on()
+                # if i == len(l)-2:
+                #     self.set_light_on()
+                #     print('light is on')
+
+                print('Going back to start! ', i, ' times')
+                
+                
+                    
+
+                
+
+            
 
                         
                 # else:
