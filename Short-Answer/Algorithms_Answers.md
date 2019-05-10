@@ -13,4 +13,4 @@ Alright, so we need a 'story' variable to keep track of the stories in the build
 broken= true
 story= (given value)
 for i in range of highest story to lowest (or zero)
-    go through (dropping) eggs at each story until it doesn't break, set broken false when it breaks
+    go through (dropping) eggs at each story, working our way down, until it doesn't break, set broken false when it  doesn't break
