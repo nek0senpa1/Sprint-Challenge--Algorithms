@@ -100,11 +100,11 @@ class SortingRobot:
         print('well it is being called')
 
         while self._light == "OFF":
-            while self._position != 0:
-                self.move_left()
-                print('Went back to start!')
+            # while self._position != 0:
+            #     self.move_left()
+            #     print('Went back to start!')
 
-            for i in range(0, len(l)-1):
+            for i in range(len(l)-1):
                 print('we are getting inside the for loop...')
                 if l[i] > l[i+1]:
                     self.swap_item()
@@ -113,7 +113,8 @@ class SortingRobot:
                     self.move_left()
                     self.swap_item()
                     self.move_right()
-                    print('Robot swapped a thingy')
+                    print('Robot swapped', l[i], 'and', l[i+1])
+                    print(l)
 
                 else:
                     print('somehow we turn the light on...')
